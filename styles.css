@@ -1,0 +1,319 @@
+/* Estilos gerais */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+  color: white;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #009fe3;
+  color: #fff;
+  padding: 12px 0;
+}
+
+nav {
+  display: flex;
+  background-color: #009fe3;
+  text-align: center;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px; /* Adiciona um pouco de preenchimento para um alvo de clique maior */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para cor de fundo e de texto */
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Cor de fundo ligeiramente mais escura ao passar o mouse */
+  color: #e0e0e0; /* Cor de texto ligeiramente mais clara ao passar o mouse */
+}
+
+/* Estilos das seções */
+section {
+  padding: 20px;
+  scroll-margin-top: 70px; /* Adicione essa linha para ajustar a rolagem */
+}
+
+header {
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Estilos do carrossel */
+.carousel {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  text-decoration: none;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Estilos da barra de ícones */
+.icons {
+  background-image: linear-gradient(#009fe300, #009fe3);
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  margin-top: -55px; /* Ajuste para sobrepor a barra de ícones no carrossel */
+  width: 100vw; /* Ajuste para cobrir toda a largura da tela */
+  margin-left: 0; /* Remover margem negativa */
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: transform 0.3s ease; /* Adiciona transição suave para transform */
+}
+
+.icons button img {
+  width: 150px;
+  transition: transform 0.3s ease; /* Transição suave para transformação */
+}
+
+.icons button:hover {
+  transform: translateY(-5px); /* Eleva o botão sutilmente */
+}
+
+.icons button.a:hover img {
+  content: url('imgs/ÍCONE SMARTPHONES VARIAÇÃO.png'); /* Substitua pelo caminho da nova imagem para o primeiro ícone */
+}
+
+.icons button.b:hover img {
+  content: url('imgs/ÍCONE ACESSÓRIOS VARIAÇÃO.png'); /* Substitua pelo caminho da nova imagem para o segundo ícone */
+}
+
+.icons button.c:hover img {
+  content: url('imgs/ÍCONE ELETRONICOS VARIAÇÃO.png'); /* Substitua pelo caminho da nova imagem para o terceiro ícone */
+}
+
+.a img {
+  width: 150px;
+  margin-left: 355px;
+}
+
+.b img {
+  width: 150px;
+}
+
+.c img {
+  width: 150px;
+  margin-right: 364px;
+}
+
+.icon-item h3 {
+  margin-top: 10px;
+  color: rgb(207, 248, 255);
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h3.a {
+  margin-left: 55vh;
+}
+
+h3.b {
+  margin: 2vh;
+}
+
+h3.c {
+  margin-right: 55vh;
+}
+
+.smartphones {
+  background: url(imgs/1.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+img.ip14 {
+  width: 70%;
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateX(-20px); /* Inicialmente deslocada para a esquerda */
+  transition: opacity 1s, transform 1s; /* Transição suave */
+  position: relative; /* Relativa para manter a posição original */
+  z-index: 2; /* Certifica-se de que fica na frente de shapeazul */
+  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+  -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+  box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+  
+}
+
+img.ip14.animate {
+  opacity: 1; /* Visível */
+  transform: translateX(0); /* Sem deslocamento */
+}
+
+img.shapeazul {
+  width: 30vh;
+  position: absolute; /* Absoluta para permitir sobreposição */
+  top: 50%; /* Ajuste conforme necessário */
+  left: 15%; /* Ajuste conforme necessário */
+  transform: translate(-50%, -50%) translateX(-20px); /* Inicialmente deslocada para a esquerda, alinhada ao centro */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 1s, transform 1s; /* Transição suave */
+  z-index: 1; /* Certifica-se de que fica atrás de ip14 */
+}
+
+img.shapeazul.animate {
+  opacity: 1; /* Visível */
+  transform: translate(-50%, -50%) translateX(0); /* Sem deslocamento */
+}
+
+div.iphone {
+  position: relative; /* Para que os filhos absolutos fiquem dentro desse contêiner */
+  margin-top: 10%;
+  background-color: #009fe3;
+}
+
+/* Estilos do botão flutuante do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-button img {
+  width: 55px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #25d366;
+  background-color: #25d366;
+  padding: 1px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover img {
+  transform: scale(1.1);
+}
+
+.whatsapp-button:not(:hover) img {
+  animation: floatAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .icons {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .icon-item {
+    margin-bottom: 20px;
+  }
+
+  .a img, .b img, .c img {
+    width: 100px;
+    margin: 0;
+  }
+
+  .icon-item h3 {
+    font-size: 14px;
+  }
+}
