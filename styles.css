@@ -200,7 +200,7 @@ header {
 }
 
 h3.a {
-  margin-left: 55vh;
+  margin-left: 50vh;
 }
 
 h3.b {
@@ -208,7 +208,7 @@ h3.b {
 }
 
 h3.c {
-  margin-right: 55vh;
+  margin-right: 50vh;
 }
 
 .smartphones {
@@ -221,29 +221,60 @@ section h2 {
   margin-top: 0;
 }
 
-img.ip14 {
-  width: 70%;
+img.ip15promax {
+  width: 95vh;
   opacity: 0; /* Inicialmente invisível */
   transform: translateX(-20px); /* Inicialmente deslocada para a esquerda */
   transition: opacity 1s, transform 1s; /* Transição suave */
   position: relative; /* Relativa para manter a posição original */
   z-index: 2; /* Certifica-se de que fica na frente de shapeazul */
-  -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
-  -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
-  box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
-  
+  margin-left: 14%;
 }
 
-img.ip14.animate {
+img.ip15promax.animate {
   opacity: 1; /* Visível */
   transform: translateX(0); /* Sem deslocamento */
+}
+
+.text-right {
+  position: absolute;
+  top: 50%; /* Ajuste conforme necessário */
+  right: 17%; /* Ajuste conforme necessário */
+  transform: translateY(-50%);
+  width: 40%; /* Ajuste conforme necessário */
+  text-align: right; /* Alinha o texto à direita */
+  color: white; /* Cor do texto */
+}
+h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+  color: #97baff;
+  font-size: 40px;
+}h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+}p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #b4e9ff;
+
+}
+
+button.cta{
+  background-color: #009fe3;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
 }
 
 img.shapeazul {
   width: 30vh;
   position: absolute; /* Absoluta para permitir sobreposição */
   top: 50%; /* Ajuste conforme necessário */
-  left: 15%; /* Ajuste conforme necessário */
+  left: 30%; /* Ajuste conforme necessário */
   transform: translate(-50%, -50%) translateX(-20px); /* Inicialmente deslocada para a esquerda, alinhada ao centro */
   opacity: 0; /* Inicialmente invisível */
   transition: opacity 1s, transform 1s; /* Transição suave */
@@ -258,7 +289,8 @@ img.shapeazul.animate {
 div.iphone {
   position: relative; /* Para que os filhos absolutos fiquem dentro desse contêiner */
   margin-top: 10%;
-  background-color: #009fe3;
+  background: url(imgs/1.jpg);
+  background-size: cover;
 }
 
 /* Estilos do botão flutuante do WhatsApp */
