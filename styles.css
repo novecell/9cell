@@ -228,7 +228,7 @@ img.ip15promax {
   transition: opacity 1s, transform 1s; /* Transição suave */
   position: relative; /* Relativa para manter a posição original */
   z-index: 2; /* Certifica-se de que fica na frente de shapeazul */
-  margin-left: 14%;
+  margin-left: 10%;
 }
 
 img.ip15promax.animate {
@@ -239,7 +239,7 @@ img.ip15promax.animate {
 .text-right {
   position: absolute;
   top: 50%; /* Ajuste conforme necessário */
-  right: 17%; /* Ajuste conforme necessário */
+  right: 28%; /* Ajuste conforme necessário */
   transform: translateY(-50%);
   width: 40%; /* Ajuste conforme necessário */
   text-align: right; /* Alinha o texto à direita */
@@ -248,16 +248,15 @@ img.ip15promax.animate {
 h1{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
   color: #97baff;
-  font-size: 40px;
+  font-size: 5vh;
 }h2{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 4vh;
   color: #ffffff;
 }p{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 4vh;
   color: #b4e9ff;
-
 }
 
 button.cta{
@@ -268,13 +267,15 @@ button.cta{
   padding: 15px;
   border: none;
   border-radius: 20px;
+} button.cta:hover{
+  background-color: #008cd1;
 }
 
 img.shapeazul {
   width: 30vh;
   position: absolute; /* Absoluta para permitir sobreposição */
   top: 50%; /* Ajuste conforme necessário */
-  left: 30%; /* Ajuste conforme necessário */
+  left: 25%; /* Ajuste conforme necessário */
   transform: translate(-50%, -50%) translateX(-20px); /* Inicialmente deslocada para a esquerda, alinhada ao centro */
   opacity: 0; /* Inicialmente invisível */
   transition: opacity 1s, transform 1s; /* Transição suave */
