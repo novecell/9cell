@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const ip14Image = document.querySelector('.ip14');
+  const ip15promaxImage = document.querySelector('.ip15promax');
 
   function handleScroll() {
-    const rect = ip14Image.getBoundingClientRect();
+    const rect = ip15promaxImage.getBoundingClientRect();
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
     if (rect.top <= windowHeight && rect.bottom >= 0) {
-      ip14Image.classList.add('animate');
+      ip15promaxImage.classList.add('animate');
       window.removeEventListener('scroll', handleScroll);
     }
   }
@@ -73,15 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
   handleScroll(); // Verifique se a imagem já está visível ao carregar a página
 });
 document.addEventListener('DOMContentLoaded', function() {
-  const ip14Image = document.querySelector('.ip14');
+  const ip15promaxImage = document.querySelector('.ip15promax');
   const shapeAzulImage = document.querySelector('.shapeazul');
 
   function handleScroll() {
-    const rect = ip14Image.getBoundingClientRect();
+    const rect = ip15promaxImage.getBoundingClientRect();
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
     if (rect.top <= windowHeight && rect.bottom >= 0) {
-      ip14Image.classList.add('animate');
+      ip15promaxImage.classList.add('animate');
       shapeAzulImage.classList.add('animate');
       window.removeEventListener('scroll', handleScroll);
     }
