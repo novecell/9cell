@@ -212,9 +212,7 @@ h3.c {
 }
 
 .smartphones {
-  background: url(imgs/1.jpg);
-  background-size: cover;
-  position: relative;
+  background-image: linear-gradient(#009fe300, #323536);
 }
 
 section h2 {
@@ -293,6 +291,17 @@ div.iphone {
   background: url(imgs/1.jpg);
   background-size: cover;
 }
+
+
+/* Sessão Serviços */
+section#servicos{
+  background-image: linear-gradient(#323536, #000000);
+}
+
+
+img.rolagem{
+  width: 800px;
+margin-left: 20%;}
 
 /* Estilos do botão flutuante do WhatsApp */
 .whatsapp-button {
