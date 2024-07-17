@@ -79,8 +79,8 @@ header {
 
 /* Estilos do carrossel */
 .carousel {
-  width: 100%;
-  height: 75vh;
+  width: 1350px;
+  height: 550px;
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
@@ -135,15 +135,15 @@ header {
 
 /* Estilos da barra de ícones */
 .icons {
-  background-image: linear-gradient(#009fe300, #009fe3);
+  background-image: linear-gradient(#00000000, #009fe3);
   display: flex;
   position: relative;
   justify-content: space-around;
-  margin-top: -55px; /* Ajuste para sobrepor a barra de ícones no carrossel */
+  margin-top: -90px; /* Ajuste para sobrepor a barra de ícones no carrossel */
   width: 100vw; /* Ajuste para cobrir toda a largura da tela */
   margin-left: 0; /* Remover margem negativa */
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 1vh;
 }
 
 .icon-item {
@@ -300,8 +300,9 @@ section#servicos{
 
 
 img.rolagem{
-  width: 800px;
-margin-left: 20%;}
+  width: 1000px;
+margin-left: 10%;}
+
 
 /* Estilos do botão flutuante do WhatsApp */
 .whatsapp-button {
@@ -327,18 +328,36 @@ margin-left: 20%;}
 }
 
 .whatsapp-button:not(:hover) img {
-  animation: floatAnimation 1s ease-in-out infinite alternate;
+  animation: Animation 2s ease-out 1s infinite normal forwards;
 }
 
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-4px);
-  }
-}
+@keyframes Animation {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
 
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
   .icons {
@@ -357,5 +376,49 @@ margin-left: 20%;}
 
   .icon-item h3 {
     font-size: 14px;
+  }
+}
+
+/*Seção pronta entrega*/
+
+.conteudoent{
+  background-color: #0e0e0e;
+  position: absolute;
+  
+}
+.contcell{
+  background-color: rgba(0, 0, 0, 0.692);
+  width: 700px;
+  height: 300px;
+  text-align: center;
+  margin: 60px;
+  position: relative;
+  
+}
+.celulares{
+  width: 250px;
+  margin-right: 100%;
+}
+
+/* CSS para animação de fade */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
   }
 }

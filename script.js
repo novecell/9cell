@@ -56,6 +56,18 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('button a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const ip15promaxImage = document.querySelector('.ip15promax');
 
@@ -89,4 +101,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Verifique se a imagem já está visível ao carregar a página
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const linkEntrega = document.getElementById('link-entrega');
+  const secaoEntrega = document.getElementById('entrega');
+  const allContent = document.getElementById('allcontent');
+
+  linkEntrega.addEventListener('click', function (e) {
+    e.preventDefault();
+    allContent.classList.add('fade-out');
+    secaoEntrega.classList.add('fade-in');
+
+    setTimeout(() => {
+      allContent.style.display = 'none';
+      allContent.classList.remove('fade-out');
+      secaoEntrega.style.display = 'block';
+    }, 500); // Duração da animação em milissegundos
+  });
+
+  const navLinks = document.querySelectorAll('nav a:not(#link-entrega)');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      secaoEntrega.classList.add('fade-out');
+      allContent.classList.add('fade-in');
+
+      setTimeout(() => {
+        secaoEntrega.style.display = 'none';
+        secaoEntrega.classList.remove('fade-out');
+        allContent.style.display = 'block';
+      }, 500); // Duração da animação em milissegundos
+
+      const targetId = this.getAttribute('href').substring(1);
+      setTimeout(() => {
+        document.getElementById(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }, 500); // Sincroniza o scroll com a transição
+    });
+  });
 });
