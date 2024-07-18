@@ -383,20 +383,18 @@ margin-left: 10%;}
 
 .conteudoent{
   background-color: #0e0e0e;
-  position: absolute;
-  
-}
-.contcell{
-  background-color: rgba(0, 0, 0, 0.692);
-  width: 700px;
-  height: 300px;
-  text-align: center;
-  margin: 60px;
   position: relative;
   
 }
+.contcell{
+  background-color: rgb(150, 150, 150);
+  width: 100vh;
+  height: 40vh;
+  position: absolute;
+  margin-left: 23%;
+}
 .celulares{
-  width: 250px;
+  height: 40vh;
   margin-right: 100%;
 }
 
